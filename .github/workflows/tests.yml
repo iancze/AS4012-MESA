@@ -30,12 +30,9 @@ jobs:
       - name: Install pip
         run: |
           pip install --upgrade pip
-      - name: Install vanilla package
+      - name: Install with test dependencies
         run: |
-          pip install .
-      - name: Install development dependencies
-        run: |
-          pip install .[dev]
+          pip install .[test]
       - name: Lint with flake8
         run: |
           pip install flake8
