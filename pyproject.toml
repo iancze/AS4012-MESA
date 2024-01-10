@@ -26,7 +26,6 @@ dev = [
     "pytest",
     "pytest-cov",
     "sphinx>=7.0.0",
-    "sphinx-autodoc2",
     "myst-nb",
     "mypy"
 ]
