@@ -1,0 +1,62 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling", "hatch-vcs"]
+
+[project]
+authors = [{ name = "Ian Czekala", email = "ic95@st-andrews.ac.uk" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy",
+    "scipy",
+    "astropy",
+    "matplotlib"
+]
+description = "Computational Assignment for AS4012"
+dynamic = ["version"]
+name = "as4012_mesa"
+readme = "README.md"
+requires-python = ">=3.6"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "sphinx>=7.2.0",
+    "sphinx-autodoc2",
+    "myst-nb"
+]
+
+[project.urls]
+Homepage = "https://github.com/iancze/AS4012-MESA"
+Issues = "https://github.com/iancze/AS4012-MESA/issues"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/as4012_mesa/as4012_mesa_version.py"
+
+[tool.black]
+line-length = 88
+
+[tool.mypy]
+warn_return_any = true
+warn_unused_configs = true
+
+[[tool.mypy.overrides]]
+module = [
+    "astropy.*",
+    "matplotlib.*",
+    "scipy.*"
+]
+ignore_missing_imports = true
+
+# [[tool.mypy.overrides]]
+# module = [
+#     "as4012_mesa.constants",
+#     ]
+# disallow_untyped_defs = true
