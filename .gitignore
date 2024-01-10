@@ -161,4 +161,5 @@ cython_debug/
 
 
 .DS_Store
+.vscode
 as4012_mesa_version.py
