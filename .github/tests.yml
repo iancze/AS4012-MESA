@@ -1,0 +1,51 @@
+name: package test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-20.04
+    strategy:
+      max-parallel: 4
+      matrix:
+        python-version: ["3.6", "3.7", "3.8", "3.9", "3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      # cache the Python environment, including installed dependencies
+      # (unique to each python-version; speeds up tests more than caching pip cache)
+      - name: Cache/Restore the Python env
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-python${{ matrix.python-version }}-env
+        with:
+          path: ${{ env.pythonLocation }}
+          key: ${{ env.pythonLocation }}-${{ hashFiles('setup.py') }}
+      - name: Install pip
+        run: |
+          pip install --upgrade pip
+      - name: Install vanilla package
+        run: |
+          pip install .
+      - name: Install development dependencies
+        run: |
+          pip install .[dev]
+      - name: Lint with flake8
+        run: |
+          pip install flake8
+          # stop the build if there are Python syntax errors or undefined names
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+      - name: Check types with MyPy
+        run: |
+          mypy src/as4012_mesa --pretty
+      - name: Run tests
+        run: |
+          pytest
