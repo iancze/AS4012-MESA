@@ -330,7 +330,6 @@ def find_read_profile(filename, model_number, nearest=False, as_table=False):
 
 
 def __read_data(filename, as_table=False, rev=False):
-    # Open the file
 
     with open(filename, "r") as file:
         # Read header data
