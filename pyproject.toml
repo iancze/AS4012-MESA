@@ -19,14 +19,14 @@ description = "Computational Assignment for AS4012"
 dynamic = ["version"]
 name = "as4012_mesa"
 readme = "README.md"
-requires-python = ">=3.6"
+requires-python = ">=3.8"
 
 [project.optional-dependencies]
 dev = [
     "pytest",
     "pytest-cov",
     "sphinx>=7.0.0",
-    "myst-nb",
+    "myst-nb>=1.0",
     "mypy"
 ]
 
