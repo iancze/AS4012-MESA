@@ -13,7 +13,7 @@
 # General Public License for more details.
 #
 # Updated for St Andrews AS4012 by Ian Czekala (ic95@st-andrews.ac.uk)
-# 
+#
 
 
 # Imports
@@ -21,28 +21,29 @@
 import os.path as op
 import numpy as np
 import re
+from astropy.table import Table
 
 # Read a MESA-Web history file
 
-def read_history(filename, as_table=False):
 
+def read_history(filename, as_table=False):
     """Read data from a MESA-Web history file
-    
+
     Parameters
     ----------
-    
+
     filename -- string giving name of history file
-    as_table -- boolean flag indicating the format of the data returned: 
+    as_table -- boolean flag indicating the format of the data returned:
                     True: return as astropy.table.Table object
                     False: return as Python dict (default)
-    
+
     Returns
     -------
 
-    hist_data -- dict or Table containing header and history data 
+    hist_data -- dict or Table containing header and history data
                  (see below for details)
 
-    Header Data 
+    Header Data
     -----------
 
     The following keys/value pairs in the returned dict (or the Table.meta dict)
@@ -60,7 +61,7 @@ def read_history(filename, as_table=False):
     History Data
     ------------
 
-    The following keys/value pairs in the returned dict (or the Table) contain 
+    The following keys/value pairs in the returned dict (or the Table) contain
     history data -- i.e., arrays describing global properties of the star over
     a sequence of time-steps. Where applicable, units are given in
     square brackets [].
@@ -116,7 +117,7 @@ def read_history(filename, as_table=False):
       o_core_radius                 -- radius of oxygen core [Rsun]
       si_core_radius                -- radius of silicon core [Rsun]
       fe_core_radius                -- radius of iron core [Rsun]
-      max_abs_v_velocity            -- maximum absolute velocity 
+      max_abs_v_velocity            -- maximum absolute velocity
       surf_avg_omega_div_omega_crit -- surface average rotation angular frequency [Omega_crit]
       log_total_angular_momentum    -- log10(total angular momentum [cm^2 g/s]
       surf_avg_omega                -- surface average rotation angular frequency [rad/s]
@@ -130,18 +131,18 @@ def read_history(filename, as_table=False):
 
 # Read a MESA-Web profile file
 
-def read_profile(filename, as_table=False):
 
+def read_profile(filename, as_table=False):
     """Read data from a MESA-Web profile file
-    
+
     Parameters
     ----------
-    
+
     filename -- string giving name of profile file
-    as_table -- boolean flag indicating the format of the data returned: 
+    as_table -- boolean flag indicating the format of the data returned:
                     True: return as astropy.table.Table object
                     False: return as Python dict (default)
-    
+
     Returns
     -------
 
@@ -151,9 +152,9 @@ def read_profile(filename, as_table=False):
     Header Data
     -----------
 
-    The following keys/value pairs in the returned dict (or Table.meta dict) 
-    contain header data -- i.e., scalars describing position-independent 
-    properties of the star. Where applicable, units are given in square 
+    The following keys/value pairs in the returned dict (or Table.meta dict)
+    contain header data -- i.e., scalars describing position-independent
+    properties of the star. Where applicable, units are given in square
     brackets [].
 
       star_mdot              -- mass-loss rate [Msun/year]
@@ -210,7 +211,7 @@ def read_profile(filename, as_table=False):
     Profile Data
     ------------
 
-    The following keys/value pairs in the returned dict (or Table) contain 
+    The following keys/value pairs in the returned dict (or Table) contain
     profile data -- i.e., describing local properties of the star over a
     sequence of spatial zones. Where applicable, units are given in
     square brackets [].
@@ -233,7 +234,7 @@ def read_profile(filename, as_table=False):
       prad              -- radiation pressure [dyn/cm^2]
       gradr             -- radiative temperature gradient
       gradT             -- physical temperature gradient
-      velocity          -- velocity [km/s] 
+      velocity          -- velocity [km/s]
       conv_vel          -- convective velocity [km/s]
       opacity           -- opacity [cm^2/g]
       eps_nuc           -- nuclear energy release rate, excluding neutrinos [erg/s/g]
@@ -279,115 +280,107 @@ def read_profile(filename, as_table=False):
 
 # Find and read a MESA-Web profile file
 
-def find_read_profile(filename, model_number, nearest=False, as_table=False):
 
-    """Find the MESA-Web profile file corresponding to a given model number, and 
+def find_read_profile(filename, model_number, nearest=False, as_table=False):
+    """Find the MESA-Web profile file corresponding to a given model number, and
     read data from it
-    
+
     Parameters
     ----------
-    
-    filename     -- string giving name of profile index file (usually, 
+
+    filename     -- string giving name of profile index file (usually,
                     'profiles.index')
     model_number -- integer model number
-    as_table     -- boolean flag indicating the format of the data returned: 
+    as_table     -- boolean flag indicating the format of the data returned:
                         True: return as astropy.table.Table object
                         False: return as Python dict (default)
-    nearest      -- boolean flag indicating whether the profile with the nearest 
-                    model number should be read, IF the exact model can't be 
+    nearest      -- boolean flag indicating whether the profile with the nearest
+                    model number should be read, IF the exact model can't be
                     found (default False)
-    
+
     Returns
     -------
 
-    prof_data -- dict or Table containing header and profile data (see 
+    prof_data -- dict or Table containing header and profile data (see
                  read_profile() for details)
     """
 
     # Open the index file and determine the profile file mapping
 
-    mod_num, prof_num = np.loadtxt(filename, skiprows=1, unpack=True, usecols=(0,2), dtype=int)
+    mod_num, prof_num = np.loadtxt(
+        filename, skiprows=1, unpack=True, usecols=(0, 2), dtype=int
+    )
 
     # Find the closest model number
 
-    i = np.argmin(np.abs(mod_num-model_number))
+    i = np.argmin(np.abs(mod_num - model_number))
 
     if not nearest:
         if mod_num[i] != model_number:
-            raise Exception("A model with the desired model number could not be found. Try using the 'nearest' flag")
+            raise Exception(
+                "A model with the desired model number could not be found. Try using the 'nearest' flag"
+            )
 
-    return read_profile(op.join(op.dirname(filename), f'profile{prof_num[i]}.data'), as_table)
+    return read_profile(
+        op.join(op.dirname(filename), f"profile{prof_num[i]}.data"), as_table
+    )
 
 
 # Read MESA data
 
-def __read_data(filename, as_table=False, rev=False):
 
+def __read_data(filename, as_table=False, rev=False):
     # Open the file
 
-    file = open(filename, 'r')
+    with open(filename, "r") as file:
+        # Read header data
 
-    # Read header data
-
-    def __num(s):
-
-        try:
-            return int(s)
-        except ValueError:
-            sr = re.sub(r'D', 'E', s)
-            sr = re.sub(r'(\d)([+-])', r'\1E\2', sr)
+        def __num(s):
             try:
-                return float(sr)
+                return int(s)
             except ValueError:
-                return s
+                sr = re.sub(r"D", "E", s)
+                sr = re.sub(r"(\d)([+-])", r"\1E\2", sr)
+                try:
+                    return float(sr)
+                except ValueError:
+                    return s
 
-    file.readline()
+        file.readline()
 
-    header_names = file.readline().split()
-    header_values = [__num(value) for value in file.readline().split()]
+        header_names = file.readline().split()
+        header_values = [__num(value) for value in file.readline().split()]
 
-    # Read array data
+        # Read array data
 
-    file.readline()
-    file.readline()
+        file.readline()
+        file.readline()
 
-    column_names = file.readline().split()
-    lines_values = []
+        column_names = file.readline().split()
+        lines_values = []
 
-    while True :
-        line = file.readline()
-        if not line : break
-        lines_values.append([__num(value) for value in line.split()])
-
-    file.close()
+        while True:
+            line = file.readline()
+            if not line:
+                break
+            lines_values.append([__num(value) for value in line.split()])
 
     # Create data structure
-
     if as_table:
-
-        # astropy table
-
-        try:
-            from astropy.table import Table
-            data = Table(meta=dict(zip(header_names, header_values)))
-        except:
-            raise Exception("The astropy package must be installed in order to use the 'as_table' flag")
-
+        data = Table(meta=dict(zip(header_names, header_values)))
     else:
-
-        # dict
-
         data = dict(zip(header_names, header_values))
 
     # Populate the structure
-
-    if (rev) :
-        for i in range(0,len(column_names)) :
-            data[column_names[i]] = np.array([line_values[i] for line_values in reversed(lines_values)])
-    else :
-        for i in range(0,len(column_names)) :
-            data[column_names[i]] = np.array([line_values[i] for line_values in lines_values])
-
-    # Return the data
+    if rev:
+        for i in range(0, len(column_names)):
+            data[column_names[i]] = np.array(
+                [line_values[i] for line_values in reversed(lines_values)]
+            )
+    else:
+        for i in range(0, len(column_names)):
+            data[column_names[i]] = np.array(
+                [line_values[i] for line_values in lines_values]
+            )
 
     return data
