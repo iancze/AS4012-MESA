@@ -9,6 +9,8 @@ All materials must be submitted through Moodle by **DATE**. There will be a pena
 
 ## Installation
 
+[![tests](https://github.com/iancze/AS4012-MESA/actions/workflows/tests.yml/badge.svg)](https://github.com/iancze/AS4012-MESA/actions/workflows/tests.yml)
+
 This repository includes code to help you analyze and plot the output from your MESA-Web run. To install this code into your Python enivornment
 
 1. Download this repository from GitHub.

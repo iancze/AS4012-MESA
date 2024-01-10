@@ -25,12 +25,12 @@ requires-python = ">=3.8"
 test = [
     "pytest",
     "pytest-cov",
+    "mypy"
 ]
 
 doc = [
     "sphinx>=7.0.0",
-    "myst-nb>=1.0",
-    "mypy"
+    "myst-nb>=1.0"
 ]
 
 [project.urls]
