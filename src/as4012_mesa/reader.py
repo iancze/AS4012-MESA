@@ -19,8 +19,9 @@
 # Imports
 
 import os.path as op
-import numpy as np
 import re
+
+import numpy as np
 from astropy.table import Table
 
 # Read a MESA-Web history file
@@ -103,9 +104,12 @@ def read_history(filename, as_table=False):
       pp                            -- log10(total pp luminosity [Lsun])
       cno                           -- log10(total CNO luminosity [Lsun])
       tri_alfa                      -- log10(total triple-alpha luminosity [Lsun])
-      log_LH                        -- log10(total H-burning luminosity, excluding neutrinos [Lsun])
-      log_LHe                       -- log10(total He-burning luminosity, excluding neutrinos [Lsun])
-      log_LZ                        -- log10(total metal-burning luminosity, excluding neutrinos [Lsun])
+      log_LH                        -- log10(total H-burning luminosity, excluding
+        neutrinos [Lsun])
+      log_LHe                       -- log10(total He-burning luminosity, excluding
+        neutrinos [Lsun])
+      log_LZ                        -- log10(total metal-burning luminosity, excluding
+        neutrinos [Lsun])
       log_Lneu                      -- log10(total neutrino luminosity [Lsun])
       he_core_mass                  -- mass of helium core [Msun]
       c_core_mass                   -- mass of carbon core [Msun]
@@ -118,12 +122,13 @@ def read_history(filename, as_table=False):
       si_core_radius                -- radius of silicon core [Rsun]
       fe_core_radius                -- radius of iron core [Rsun]
       max_abs_v_velocity            -- maximum absolute velocity
-      surf_avg_omega_div_omega_crit -- surface average rotation angular frequency [Omega_crit]
+      surf_avg_omega_div_omega_crit -- surface average rotation angular frequency
+        [Omega_crit]
       log_total_angular_momentum    -- log10(total angular momentum [cm^2 g/s]
-      surf_avg_omega                -- surface average rotation angular frequency [rad/s]
+      surf_avg_omega                -- surface average rotation angular
+        frequency [rad/s]
       surf_avg_v_rot                -- surface average rotation velocity [km/s]
       star_mdot                     -- mass-loss rate [Msun/year]
-
     """
 
     return __read_data(filename, as_table)
@@ -198,10 +203,14 @@ def read_profile(filename, as_table=False):
       dynamic_timescale      -- dynamical timescale [s]
       kh_timescale           -- Kelvin-Helmholtz timescale [s]
       nuc_timescale          -- nuclear timescale [s]
-      log_LH                 -- log10(total H-burning luminosity, excluding neutrinos [Lsun])
-      log_LHe                -- log10(total He-burning luminosity, excluding neutrinos [Lsun])
-      log_LZ                 -- log10(total metal-burning luminosity, excluding neutrinos [Lsun])
-      power_nuc_burn         -- total nuclear burning luminosity, excluding photodisintegrations [Lsun]
+      log_LH                 -- log10(total H-burning luminosity, excluding
+        neutrinos [Lsun])
+      log_LHe                -- log10(total He-burning luminosity, excluding
+        neutrinos [Lsun])
+      log_LZ                 -- log10(total metal-burning luminosity, excluding
+        neutrinos [Lsun])
+      power_nuc_burn         -- total nuclear burning luminosity, excluding
+        photodisintegrations [Lsun]
       power_h_burn           -- total H-burning luminosity, excluding neutrinos [Lsun]
       power_he_burn          -- total He-burning luminosity, excluding neutrinos [Lsun]
       power_neu              -- total neutrino luminosity [Lsun]
@@ -318,7 +327,8 @@ def find_read_profile(filename, model_number, nearest=False, as_table=False):
     if not nearest:
         if mod_num[i] != model_number:
             raise Exception(
-                "A model with the desired model number could not be found. Try using the 'nearest' flag"
+                "A model with the desired model number could not be found." +
+                "Try using the 'nearest' flag"
             )
 
     return read_profile(
@@ -330,8 +340,7 @@ def find_read_profile(filename, model_number, nearest=False, as_table=False):
 
 
 def __read_data(filename, as_table=False, rev=False):
-
-    with open(filename, "r") as file:
+    with open(filename) as file:
         # Read header data
 
         def __num(s):
@@ -366,9 +375,9 @@ def __read_data(filename, as_table=False, rev=False):
 
     # Create data structure
     if as_table:
-        data = Table(meta=dict(zip(header_names, header_values)))
+        data = Table(meta=dict(zip(header_names, header_values, strict=False)))
     else:
-        data = dict(zip(header_names, header_values))
+        data = dict(zip(header_names, header_values, strict=False))
 
     # Populate the structure
     if rev:

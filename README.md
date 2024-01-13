@@ -64,6 +64,7 @@ If you have any issues, please review the [guide to installing Python packages](
 ## References
 
 * [Asplund et al. 2009ARA&A..47..481A](https://ui.adsabs.harvard.edu/abs/2009ARA%26A..47..481A/abstract) You can download the article if you are on the StA network, otherwise there is a copy on Moodle.  
-* [MESA-Web](http://user.astro.wisc.edu/~townsend/static.php?ref=mesa-web) the interface you will use to access MESA.
-* [MESA](https://docs.mesastar.org/en/release-r23.05.1/), the underlying software (FYI, only).
+* [MESA-Web](http://user.astro.wisc.edu/~townsend/static.php?ref=mesa-web) the online interface you will use to run MESA.
+* [Fields et al. 2023](https://ui.adsabs.harvard.edu/abs/2023arXiv230915930F/abstract): Publication to appear in the Astronomy Education Journal describing MESA-Web
+* [MESA](https://docs.mesastar.org/en/release-r23.05.1/), the underlying software (FYI).
 * [DSFE 2018 grading rubric](https://matthew-brett.github.io/dsfe/projects/rubric), inspiration for rubric.

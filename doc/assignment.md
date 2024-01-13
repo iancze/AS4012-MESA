@@ -25,6 +25,10 @@ Many questions ask for narrative text to explain your results. Write at most 3 s
 ## Part II: Solving the equations of stellar structure from scratch
 In this part, you will implement your own numerical integration scheme to solve the equations of stellar structure and compare it to your output from MESA in Part I. You may wish to review the equations of stellar structure and their Eulerian/Lagrangian formulations in Lectures 2 & 3.
 
+Read [Paxton et al. 2011](https://ui.adsabs.harvard.edu/abs/2011ApJS..192....3P/abstract), the article describing the MESA codebase. Pay attention to Section 6.
+
+Compare and contrast the Henyey and Schwarzchild schemes.
+
 4. What is the significance of a Eulerian vs. Lagrangian scheme? Why might one be preferred over the other, depending on the physical problem?
 
 5. 
