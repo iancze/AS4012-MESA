@@ -64,6 +64,7 @@ If you have any issues, please review the [guide to installing Python packages](
 ## References
 
 * [Asplund et al. 2009ARA&A..47..481A](https://ui.adsabs.harvard.edu/abs/2009ARA%26A..47..481A/abstract) You can download the article if you are on the StA network, otherwise there is a copy on Moodle.  
+* [R. Kippenhahn, A. Weigert, A. Weiss (2013) "Stellar structure and Evolution](https://sta.rl.talis.com/link?url=https%3A%2F%2Fdoi-org.ezproxy.st-andrews.ac.uk%2F10.1007%2F978-3-642-30304-3&sig=fdcd1071b225a1cf90b44eda5279280c95987ab43c127ec62127524cf667c523) E-Textbook (free to StA)
 * [MESA-Web](http://user.astro.wisc.edu/~townsend/static.php?ref=mesa-web) the online interface you will use to run MESA.
 * [Fields et al. 2023](https://ui.adsabs.harvard.edu/abs/2023arXiv230915930F/abstract): Publication to appear in the Astronomy Education Journal describing MESA-Web
 * [MESA](https://docs.mesastar.org/en/release-r23.05.1/), the underlying software (FYI).
