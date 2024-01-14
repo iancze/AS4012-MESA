@@ -39,7 +39,8 @@ def read_history(filename):
 
     Notes
     -----
-    See `Astropy.table <https://docs.astropy.org/en/stable/table/>`_ for more information on working with the returned object.
+    See `Astropy.table <https://docs.astropy.org/en/stable/table/>`_ for more
+    information on working with the returned object.
 
     >>> table = read_history("trimmed_history.data")
     >>> log_L = table["log_L"]
