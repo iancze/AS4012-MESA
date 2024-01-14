@@ -341,7 +341,7 @@ def __read_data(filename, rev=False):
             lines_values.append([__num(value) for value in line.split()])
 
     # Create data structure
-    data = Table(meta=dict(zip(header_names, header_values, strict=False)))
+    data = Table(meta=dict(zip(header_names, header_values)))
 
     # Populate the structure
     if rev:

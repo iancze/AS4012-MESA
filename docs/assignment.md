@@ -26,7 +26,7 @@ For more information, there is the very helpful textbook [Stellar structure and 
 
     3.3. What is the star's primary energy source at this stage? How do you know?
 
-## Part I: Solving the stellar structure equations yourself using the shooting method (Schwarzchild)
+## Part II: Solving the stellar structure equations yourself using the shooting method (Schwarzchild)
 
 As you saw in Part I, the shooting method of solving the equations of stellar structure ([Schwarzchild 1958](https://encore.st-andrews.ac.uk/iii/encore/record/C__Rb3087134__Sstructure%20and%20evolution%20of%20stars__Orightresult__U__X7?lang=eng&suite=def)) has been eclipsed by modern partial differential equation solvers. However, its implementation is simple enough to expose you to the numerical techniques used in stellar structure calculations. 
 
