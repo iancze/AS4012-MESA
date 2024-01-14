@@ -1,0 +1,712 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>as4012_sstr.reader &#8212; s4012_sstr 0.1.dev1+g801c44e documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script src="../../_static/documentation_options.js?v=9a2f047c"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/as4012_sstr/reader';</script>
+    <script src="https://buttons.github.io/buttons.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">s4012_sstr 0.1.dev1+g801c44e documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../assignment.html">Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api.html">API</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/iancze/AS4012-MESA" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for as4012_sstr.reader</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Python module to handle MESA-Web output files</span>
+<span class="c1"># Original Code by</span>
+
+<span class="c1"># (c) 2021-2023 Rich Townsend (rhtownsend@me.com)</span>
+<span class="c1">#</span>
+<span class="c1"># This module is free software: you can redistribute it and/or modify</span>
+<span class="c1"># it under the terms of the GNU General Public License as published by</span>
+<span class="c1"># the Free Software Foundation, version 3.</span>
+<span class="c1">#</span>
+<span class="c1"># This module is distributed in the hope that it will be useful, but</span>
+<span class="c1"># WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="c1"># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span>
+<span class="c1"># General Public License for more details.</span>
+<span class="c1">#</span>
+<span class="c1"># 2024</span>
+<span class="c1"># Updated for St Andrews AS4012 by Ian Czekala (ic95@st-andrews.ac.uk).</span>
+<span class="c1"># Removed plain Python dict option for return type</span>
+<span class="c1"># Reformatted docstrings to Google/NumPy style.,</span>
+
+
+<span class="kn">import</span> <span class="nn">os.path</span> <span class="k">as</span> <span class="nn">op</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">astropy.table</span> <span class="kn">import</span> <span class="n">Table</span>
+
+
+<div class="viewcode-block" id="read_history">
+<a class="viewcode-back" href="../../api.html#as4012_sstr.reader.read_history">[docs]</a>
+<span class="k">def</span> <span class="nf">read_history</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Read data from a MESA-Web history file</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filename</span>
+<span class="sd">      string giving name of history file</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    :class:`astropy.Table` object containing header and history data</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    **Header Data**: The following keys/value pairs in the returned Table.meta dict</span>
+<span class="sd">    contain header data -- i.e., scalars describing time-independent properties</span>
+<span class="sd">    of the star. Where applicable, units are given in square brackets [].</span>
+
+<span class="sd">    * version_number   -- version number of MESA</span>
+<span class="sd">    * compiler         -- name of compiler used to build MESA</span>
+<span class="sd">    * build            -- version of compiler used to build MESA</span>
+<span class="sd">    * MESA_SDK_version -- version of Software Development Kit used to build MESA</span>
+<span class="sd">    * date             -- date on which MESA-Web calculation began</span>
+<span class="sd">    * burn_min1        -- 1st limit for reported burning [erg/g/s]</span>
+<span class="sd">    * burn_min2        -- 2nd limit for reported burning [erg/g/s]</span>
+
+<span class="sd">    **History Data**: The following keys/value pairs in the returned</span>
+<span class="sd">    Table contain history data -- i.e., arrays describing global properties of the</span>
+<span class="sd">    star over a sequence of time-steps. Where applicable, units are given in</span>
+<span class="sd">    square brackets [].</span>
+
+<span class="sd">    * model_number                  -- model number</span>
+<span class="sd">    * star_age                      -- stellar age [years]</span>
+<span class="sd">    * star_mass                     -- stellar mass [Msun]</span>
+<span class="sd">    * log_L                         -- log10(stellar luminosity [Lsun])</span>
+<span class="sd">    * log_R                         -- log10(stellar radius [Rsun])</span>
+<span class="sd">    * log_Teff                      -- log10(effective temperature [K])</span>
+<span class="sd">    * log_center_T                  -- log10(center temperature [K])</span>
+<span class="sd">    * log_center_Rho                -- log10(center density [g/cm^3])</span>
+<span class="sd">    * log_center_P                  -- log10(center pressure [dyn/cm^2])</span>
+<span class="sd">    * center_h1                     -- center 1H mass fraction</span>
+<span class="sd">    * center_he3                    -- center 3He mass fraction</span>
+<span class="sd">    * center_he4                    -- center 4He mass fraction</span>
+<span class="sd">    * center_c12                    -- center 12C mass fraction</span>
+<span class="sd">    * center_n14                    -- center 14N mass fraction</span>
+<span class="sd">    * center_o16                    -- center 16O mass fraction</span>
+<span class="sd">    * center_ne20                   -- center 20Ne mass fraction</span>
+<span class="sd">    * center_mg24                   -- center 24Mg mass fraction</span>
+<span class="sd">    * center_si28                   -- center 28Si mass fraction</span>
+<span class="sd">    * center_s32                    -- center 32S mass fraction</span>
+<span class="sd">    * center_ar36                   -- center 36Ar mass fraction</span>
+<span class="sd">    * center_ca40                   -- center 40Ca mass fraction</span>
+<span class="sd">    * center_ti44                   -- center 44Ti mass fraction</span>
+<span class="sd">    * center_cr48                   -- center 48Cr mass fraction</span>
+<span class="sd">    * center_fe52                   -- center 52Fe mass fraction</span>
+<span class="sd">    * center_fe54                   -- center 54Fe mass fraction</span>
+<span class="sd">    * center_fe56                   -- center 56Fe mass fraction</span>
+<span class="sd">    * center_ni56                   -- center 56Ni mass fraction</span>
+<span class="sd">    * center_degeneracy             -- center electron degeneracy parameter [kB*T]</span>
+<span class="sd">    * center_ye                     -- center average charge per baryon [e]</span>
+<span class="sd">    * center_entropy                -- center entropy [kB]</span>
+<span class="sd">    * compactness_parameter         -- (m/Msun)/(R(m)/1000km) for m = 2.5 Msun</span>
+<span class="sd">    * dynamic_timescale             -- dynamical timescale [s]</span>
+<span class="sd">    * kh_timescale                  -- Kelvin-Helmholtz timescale [s]</span>
+<span class="sd">    * nuc_timescale                 -- nuclear timescale [s]</span>
+<span class="sd">    * pp                            -- log10(total pp luminosity [Lsun])</span>
+<span class="sd">    * cno                           -- log10(total CNO luminosity [Lsun])</span>
+<span class="sd">    * tri_alfa                      -- log10(total triple-alpha luminosity [Lsun])</span>
+<span class="sd">    * log_LH                        -- log10(total H-burning luminosity, excluding</span>
+<span class="sd">      neutrinos [Lsun])</span>
+<span class="sd">    * log_LHe                       -- log10(total He-burning luminosity, excluding</span>
+<span class="sd">      neutrinos [Lsun])</span>
+<span class="sd">    * log_LZ                        -- log10(total metal-burning luminosity, excluding</span>
+<span class="sd">      neutrinos [Lsun])</span>
+<span class="sd">    * log_Lneu                      -- log10(total neutrino luminosity [Lsun])</span>
+<span class="sd">    * he_core_mass                  -- mass of helium core [Msun]</span>
+<span class="sd">    * c_core_mass                   -- mass of carbon core [Msun]</span>
+<span class="sd">    * o_core_mass                   -- mass of oxygen core [Msun]</span>
+<span class="sd">    * si_core_mass                  -- mass of silicon core [Msun]</span>
+<span class="sd">    * fe_core_mass                  -- mass of iron core [Msun]</span>
+<span class="sd">    * he_core_radius                -- radius of helium core [Rsun]</span>
+<span class="sd">    * c_core_radius                 -- radius of carbon core [Rsun]</span>
+<span class="sd">    * o_core_radius                 -- radius of oxygen core [Rsun]</span>
+<span class="sd">    * si_core_radius                -- radius of silicon core [Rsun]</span>
+<span class="sd">    * fe_core_radius                -- radius of iron core [Rsun]</span>
+<span class="sd">    * max_abs_v_velocity            -- maximum absolute velocity</span>
+<span class="sd">    * surf_avg_omega_div_omega_crit -- surface average rotation angular frequency</span>
+<span class="sd">    *   [Omega_crit]</span>
+<span class="sd">    * log_total_angular_momentum    -- log10(total angular momentum [cm^2 g/s]</span>
+<span class="sd">    * surf_avg_omega                -- surface average rotation angular</span>
+<span class="sd">      frequency [rad/s]</span>
+<span class="sd">    * surf_avg_v_rot                -- surface average rotation velocity [km/s]</span>
+<span class="sd">    * star_mdot                     -- mass-loss rate [Msun/year]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="n">__read_data</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="read_profile">
+<a class="viewcode-back" href="../../api.html#as4012_sstr.reader.read_profile">[docs]</a>
+<span class="k">def</span> <span class="nf">read_profile</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Read data from a MESA-Web profile file</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filename: string</span>
+<span class="sd">      name of profile file</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    :class:`astropy.Table` containing header and profile data</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    **Header data**: The following keys/value pairs in the returned Table.meta dict</span>
+<span class="sd">    contain header data -- i.e., scalars describing position-independent</span>
+<span class="sd">    properties of the star. Where applicable, units are given in square</span>
+<span class="sd">    brackets [].</span>
+
+<span class="sd">    * star_mdot              -- mass-loss rate [Msun/year]</span>
+<span class="sd">    * model_number           -- model number</span>
+<span class="sd">    * num_zones              -- number of zones</span>
+<span class="sd">    * initial_mass           -- initial mass [Msun]</span>
+<span class="sd">    * initial_z              -- initial metal mass fraction</span>
+<span class="sd">    * star_age               -- stellar age [years]</span>
+<span class="sd">    * time_step              -- current time-step [s]</span>
+<span class="sd">    * Teff                   -- effective temperature [K]</span>
+<span class="sd">    * photosphere_L          -- photospheric luminosity [Lsun]</span>
+<span class="sd">    * photosphere_r          -- photospheric radius [Rsun]</span>
+<span class="sd">    * center_eta             -- center electron chemical potential [kB*T]</span>
+<span class="sd">    * center_h1              -- center 1H mass fraction</span>
+<span class="sd">    * center_he3             -- center 3He mass fraction</span>
+<span class="sd">    * center_he4             -- center 4He mass fraction</span>
+<span class="sd">    * center_c12             -- center 12C mass fraction</span>
+<span class="sd">    * center_n14             -- center 14N mass fraction</span>
+<span class="sd">    * center_o16             -- center 16O mass fraction</span>
+<span class="sd">    * center_ne20            -- center 20Ne mass fraction</span>
+<span class="sd">    * star_age               -- stellar age [years]</span>
+<span class="sd">    * star_mass              -- stellar mass [Msun]</span>
+<span class="sd">    * star_mdot              -- mass-loss rate [Msun/year]</span>
+<span class="sd">    * star_mass_h1           -- total mass in 1H [Msun]</span>
+<span class="sd">    * star_mass_he3          -- total mass in 3He [Msun]</span>
+<span class="sd">    * star_mass_he4          -- total mass in 4He [Msun]</span>
+<span class="sd">    * star_mass_c12          -- total mass in 12C [Msun]</span>
+<span class="sd">    * star_mass_n14          -- total mass in 14N [Msun]</span>
+<span class="sd">    * star_mass_o16          -- total mass in 16O [Msun]</span>
+<span class="sd">    * star_mass_ne20         -- total mass in 20Ne [Msun]</span>
+<span class="sd">    * he_core_mass           -- mass of helium core [Msun]</span>
+<span class="sd">    * c_core_mass            -- mass of carbon core [Msun]</span>
+<span class="sd">    * o_core_mass            -- mass of oxygen core [Msun]</span>
+<span class="sd">    * si_core_mass           -- mass of silicon core [Msun]</span>
+<span class="sd">    * fe_core_mass           -- mass of iron core [Msun]</span>
+<span class="sd">    * neutron_rich_core_mass -- mass of neutron-rich core [Msun]</span>
+<span class="sd">    * tau10_mass             -- mass coordinate of optical depth 10 [Msun]</span>
+<span class="sd">    * tau10_radius           -- radius coordinate of optical depth 10 [Rsun]</span>
+<span class="sd">    * tau100_mass            -- mass coordinate of optical depth 100 [Msun]</span>
+<span class="sd">    * tau100_radius          -- radius coordinate of optical depth 100 [Rsun]</span>
+<span class="sd">    * dynamic_timescale      -- dynamical timescale [s]</span>
+<span class="sd">    * kh_timescale           -- Kelvin-Helmholtz timescale [s]</span>
+<span class="sd">    * nuc_timescale          -- nuclear timescale [s]</span>
+<span class="sd">    * log_LH                 -- log10(total H-burning luminosity, excluding</span>
+<span class="sd">      neutrinos [Lsun])</span>
+<span class="sd">    * log_LHe                -- log10(total He-burning luminosity, excluding</span>
+<span class="sd">      neutrinos [Lsun])</span>
+<span class="sd">    * log_LZ                 -- log10(total metal-burning luminosity, excluding</span>
+<span class="sd">      neutrinos [Lsun])</span>
+<span class="sd">    * power_nuc_burn         -- total nuclear burning luminosity, excluding</span>
+<span class="sd">      photodisintegrations [Lsun]</span>
+<span class="sd">    * power_h_burn           -- total H-burning luminosity, excluding neutrinos [Lsun]</span>
+<span class="sd">    * power_he_burn          -- total He-burning luminosity, excluding neutrinos [Lsun]</span>
+<span class="sd">    * power_neu              -- total neutrino luminosity [Lsun]</span>
+<span class="sd">    * burn_min1              -- 1st limit for reported burning [erg/g/s]</span>
+<span class="sd">    * burn_min2              -- 2nd limit for reported burning [erg/g/s]</span>
+
+<span class="sd">    **Profile data**: The following keys/value pairs in the returned Table contain</span>
+<span class="sd">    profile data -- i.e., describing local properties of the star over a</span>
+<span class="sd">    sequence of spatial zones. Where applicable, units are given in</span>
+<span class="sd">    square brackets [].</span>
+
+<span class="sd">    * mass              -- mass coordinate [Msun]</span>
+<span class="sd">    * radius            -- radius coordinate [Rsun]</span>
+<span class="sd">    * luminosity        -- luminosity [Lsun]</span>
+<span class="sd">    * pressure          -- pressure [dyn/cm^2]</span>
+<span class="sd">    * logRho            -- log10(density [g/cm^3])</span>
+<span class="sd">    * logT              -- log10(temperature [K])</span>
+<span class="sd">    * energy            -- log10(specific internal energy [erg/g])</span>
+<span class="sd">    * entropy           -- log10(specific entropy [kB*N_avo])</span>
+<span class="sd">    * cp                -- specific heat at constant pressure [erg/K/g]</span>
+<span class="sd">    * gamma1            -- first adiabatic exponent</span>
+<span class="sd">    * grada             -- adiabatic temperature gradient</span>
+<span class="sd">    * mu                -- mean molecular weight</span>
+<span class="sd">    * free_e            -- free electrons per nucleon</span>
+<span class="sd">    * ye                -- average charge per baryon [e]</span>
+<span class="sd">    * pgas              -- gas pressure [dyn/cm^2]</span>
+<span class="sd">    * prad              -- radiation pressure [dyn/cm^2]</span>
+<span class="sd">    * gradr             -- radiative temperature gradient</span>
+<span class="sd">    * gradT             -- physical temperature gradient</span>
+<span class="sd">    * velocity          -- velocity [km/s]</span>
+<span class="sd">    * conv_vel          -- convective velocity [km/s]</span>
+<span class="sd">    * opacity           -- opacity [cm^2/g]</span>
+<span class="sd">    * eps_nuc           -- nuclear energy release rate, excluding neutrinos [erg/s/g]</span>
+<span class="sd">    * pp                -- pp  energy release rate [erg/s/g]</span>
+<span class="sd">    * cno               -- CNO energy release rate [erg/s/g]</span>
+<span class="sd">    * tri_alfa          -- triple-alpha energy release rate [erg/s/g]</span>
+<span class="sd">    * eps_nuc_neu_total -- energy loss rate as nuclear neutrinos [erg/s/g]</span>
+<span class="sd">    * non_nuc_neu       -- energy loss rate as non-nuclear neutrinos [erg/s/g]</span>
+<span class="sd">    * eps_grav          -- thermal energy release rate [erg/s/g]</span>
+<span class="sd">    * h1                -- 1H mass fraction</span>
+<span class="sd">    * he3               -- 3He mass fraction</span>
+<span class="sd">    * he4               -- 4He mass fraction</span>
+<span class="sd">    * c12               -- 12C mass fraction</span>
+<span class="sd">    * n14               -- 14N mass fraction</span>
+<span class="sd">    * o16               -- 16O mass fraction</span>
+<span class="sd">    * ne20              -- 20Ne mass fraction</span>
+<span class="sd">    * mg24              -- 24Mg mass fraction</span>
+<span class="sd">    * si28              -- 28Si mass fraction</span>
+<span class="sd">    * s32               -- 32S mass fraction</span>
+<span class="sd">    * ar36              -- 36Ar mass fraction</span>
+<span class="sd">    * ca40              -- 40Ca mass fraction</span>
+<span class="sd">    * ti44              -- 44Ti mass fraction</span>
+<span class="sd">    * cr48              -- 48Cr mass fraction</span>
+<span class="sd">    * fe52              -- 52Fe mass fraction</span>
+<span class="sd">    * fe54              -- 54Fe mass fraction</span>
+<span class="sd">    * fe56              -- 56Fe mass fraction</span>
+<span class="sd">    * ni56              -- 56Ni mass fraction</span>
+<span class="sd">    * eta               -- electron chemical potential [kB*T]</span>
+<span class="sd">    * log_omega         -- log10(rotation angular velocity [rad/s])</span>
+<span class="sd">    * v_rot             -- rotation velocity [km/s]</span>
+<span class="sd">    * j_rot             -- specific angular momentum [cm^2/s]</span>
+<span class="sd">    * dynamo_log_B_r    -- log10(dynamo-generated radial field strength [gauss])</span>
+<span class="sd">    * dynamo_log_B_phi  -- log10(dynamo-generated azimuthal field strength [gauss])</span>
+<span class="sd">    * log_D_conv        -- log10(convective diffusivity [cm^2/s])</span>
+<span class="sd">    * log_D_semi        -- log10(semiconvective diffusivity [cm^2/s])</span>
+<span class="sd">    * log_D_ovr         -- log10(overshoot diffusivity [cm^2/s])</span>
+<span class="sd">    * log_D_thrm        -- log10(thermohaline diffusivity [cm^2/s])</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="n">__read_data</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">rev</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+
+
+
+<span class="c1"># Find and read a MESA-Web profile file</span>
+
+
+<div class="viewcode-block" id="find_read_profile">
+<a class="viewcode-back" href="../../api.html#as4012_sstr.reader.find_read_profile">[docs]</a>
+<span class="k">def</span> <span class="nf">find_read_profile</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">model_number</span><span class="p">,</span> <span class="n">nearest</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Find the MESA-Web profile file corresponding to a given model number, and</span>
+<span class="sd">    read data from it</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    filename: string</span>
+<span class="sd">      name of profile index file (usually, &#39;profiles.index&#39;)</span>
+<span class="sd">    model_number: int</span>
+<span class="sd">      model number</span>
+<span class="sd">    nearest: bool</span>
+<span class="sd">      flag indicating whether the profile with the nearest</span>
+<span class="sd">      model number should be read, IF the exact model can&#39;t be</span>
+<span class="sd">      found (default False)</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    :class:`astropy.Table` object containing header and profile data (see</span>
+<span class="sd">      read_profile() for details)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Open the index file and determine the profile file mapping</span>
+    <span class="n">mod_num</span><span class="p">,</span> <span class="n">prof_num</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span>
+        <span class="n">filename</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">unpack</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Find the closest model number</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">mod_num</span> <span class="o">-</span> <span class="n">model_number</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">nearest</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">mod_num</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">model_number</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
+                <span class="s2">&quot;A model with the desired model number could not be found.&quot;</span>
+                <span class="o">+</span> <span class="s2">&quot;Try using the &#39;nearest&#39; flag&quot;</span>
+            <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">read_profile</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">filename</span><span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;profile</span><span class="si">{</span><span class="n">prof_num</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">.data&quot;</span><span class="p">))</span></div>
+
+
+
+<span class="k">def</span> <span class="nf">__read_data</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">rev</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="c1"># Read header data</span>
+
+        <span class="k">def</span> <span class="nf">__num</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="n">sr</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+                <span class="n">sr</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(\d)([+-])&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;\1E\2&quot;</span><span class="p">,</span> <span class="n">sr</span><span class="p">)</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">sr</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">s</span>
+
+        <span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+
+        <span class="n">header_names</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="n">header_values</span> <span class="o">=</span> <span class="p">[</span><span class="n">__num</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
+
+        <span class="c1"># Read array data</span>
+
+        <span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+
+        <span class="n">column_names</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="n">lines_values</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">line</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="n">lines_values</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">__num</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()])</span>
+
+    <span class="c1"># Create data structure</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="n">meta</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">header_names</span><span class="p">,</span> <span class="n">header_values</span><span class="p">)))</span>
+
+    <span class="c1"># Populate the structure</span>
+    <span class="k">if</span> <span class="n">rev</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">column_names</span><span class="p">)):</span>
+            <span class="n">data</span><span class="p">[</span><span class="n">column_names</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+                <span class="p">[</span><span class="n">line_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">line_values</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">lines_values</span><span class="p">)]</span>
+            <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">column_names</span><span class="p">)):</span>
+            <span class="n">data</span><span class="p">[</span><span class="n">column_names</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+                <span class="p">[</span><span class="n">line_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">line_values</span> <span class="ow">in</span> <span class="n">lines_values</span><span class="p">]</span>
+            <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">data</span>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ian Czekala
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Ian Czekala.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

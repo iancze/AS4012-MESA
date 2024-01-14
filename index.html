@@ -1,0 +1,528 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>AS4012: Nebulae And Stars 2 Stellar Structure Computational Project &#8212; s4012_sstr 0.1.dev1+g801c44e documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script src="_static/documentation_options.js?v=9a2f047c"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <script src="https://buttons.github.io/buttons.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Assignment" href="assignment.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">s4012_sstr 0.1.dev1+g801c44e documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="assignment.html">Assignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/iancze/AS4012-MESA" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/index.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>AS4012: Nebulae And Stars 2 Stellar Structure Computational Project</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submission">Submission</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grading-rubric">Grading Rubric</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-questions">Assignment Questions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-installation">Code Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="as4012-nebulae-and-stars-2-stellar-structure-computational-project">
+<h1>AS4012: Nebulae And Stars 2 Stellar Structure Computational Project<a class="headerlink" href="#as4012-nebulae-and-stars-2-stellar-structure-computational-project" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>University of St Andrews, Spring 2024</p></li>
+<li><p>Instructor: Dr. Ian Czekala</p></li>
+</ul>
+<p>For this assessed computational project, you will compute the internal structure of a Sun-like star on the Zero-Age-Main-Sequence (ZAMS) using the Modules for Experiments in Stellar Astrophysics (MESA) code. In Part I, you will use the online interface MESA-web to run a numerical integration and write your own Python code to analyze the output. In Part II, you will implement your own Lagrangian scheme to solve the equations of stellar structure, and compare your results to your MESA run in Part I. For the full assignment, see the <a class="reference internal" href="#doc/assignment.md"><span class="xref myst"><strong>Assignment Questions</strong></span></a>.</p>
+<section id="submission">
+<h2>Submission<a class="headerlink" href="#submission" title="Link to this heading">#</a></h2>
+<p>All materials must be submitted through Moodle by <strong>23:59 February 23rd, 2024</strong>. There will be a penalty of 5% of the total available marks per day or partial day of late submission, including weekends and holidays. Requests for extensions made after the end of Week 5 (Feb 16) will not be considered.</p>
+<p>Use the Moodle submission tool to submit:</p>
+<p><strong>Report</strong> containing the narrative text, plots, and numerical results requested for each question. You are free to prepare this report with whatever combination of tools you wish, but it must be self-contained <em>as a single PDF</em>. I would suggest either</p>
+<ul class="simple">
+<li><p>save plots as <code class="docutils literal notranslate"><span class="pre">*.png</span></code>, insert into Word or LaTeX document, add text, save to PDF.</p></li>
+<li><p>work directly in a Jupyter Notebook, plots appear in Notebook, add text with markdown cells, export to PDF.</p></li>
+</ul>
+<p><strong>Code</strong>: your <code class="docutils literal notranslate"><span class="pre">*.py</span></code> or <code class="docutils literal notranslate"><span class="pre">*.ipynb</span></code> files. Alternatively, create a “secret” <a class="reference external" href="https://gist.github.com/">Gist</a> with your code and submit the link.</p>
+</section>
+<section id="grading-rubric">
+<h2>Grading Rubric<a class="headerlink" href="#grading-rubric" title="Link to this heading">#</a></h2>
+<p>The assignment counts for 25% of your module grade. The <a class="reference internal" href="#doc/assignment.md"><span class="xref myst"><strong>Assignment Questions</strong></span></a> have point values listed beside them. There are an additional XX points awarded for report quality, for a total of YY points.</p>
+<p><strong>Excellent</strong> quality reports will:</p>
+<ul class="simple">
+<li><p>Demonstrate a correct understanding of the underlying physics solved by the MESA code.</p></li>
+<li><p>Concisely and directly explain the significance of numerical results using narrative text.</p></li>
+<li><p>Contain correct numerical results, and correctly implement the Lagrangian scheme.</p></li>
+<li><p>Demonstrate an understanding of how the Lagrangian scheme in Part II relates to the output from MESA in Part I.</p></li>
+</ul>
+<p><strong>Average</strong> quality reports may:</p>
+<ul class="simple">
+<li><p>Demonstrate a largely correct understanding of the subject matter, but may evidence small misconceptions.</p></li>
+<li><p>Present correct numerical results, but may fail to fully explain their significance.</p></li>
+<li><p>Be vague or overly wordy with their narrative text.</p></li>
+<li><p>Fail to demonstrate understanding of the conceptual links between Part I and II.</p></li>
+</ul>
+<p><strong>Poor</strong> quality reports may:</p>
+<ul class="simple">
+<li><p>Demonstrate an incorrect understanding of the subject matter and the numerical calculations.</p></li>
+<li><p>Contain numerical errors.</p></li>
+<li><p>Fail to connect physical and numerical understanding across parts of the assignment.</p></li>
+<li><p>Be incomplete.</p></li>
+</ul>
+<p>The narrative aspect of your report is as important to understanding the results of your analysis as your numerical values are. Assume that you are writing a technical report to your manager or team members. Take pride in your work and strive for clarity, concision, and excellence.</p>
+</section>
+<section id="assignment-questions">
+<h2>Assignment Questions<a class="headerlink" href="#assignment-questions" title="Link to this heading">#</a></h2>
+<p>See the <a class="reference internal" href="#doc/assignment.md"><span class="xref myst"><strong>Assignment Questions</strong></span></a>.</p>
+</section>
+<section id="code-installation">
+<h2>Code Installation<a class="headerlink" href="#code-installation" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://github.com/iancze/AS4012-MESA/actions/workflows/tests.yml"><img alt="tests" src="https://github.com/iancze/AS4012-MESA/actions/workflows/tests.yml/badge.svg" /></a></p>
+<p>This repository includes code to help you analyze and plot the output from your MESA-Web run. To install this code into your Python environment</p>
+<ol class="arabic simple">
+<li><p>Download this repository from GitHub.</p></li>
+<li><p>Enter the root of the repository, and run</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">.</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Now, in your Python interpreter, you should be able to do</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">as4012_sstr</span>
+</pre></div>
+</div>
+<p>If you have any issues, please review the <a class="reference external" href="https://packaging.python.org/en/latest/tutorials/installing-packages/">guide to installing Python packages</a>. If your issues persist, please contact <a class="reference external" href="mailto:ic95&#37;&#52;&#48;st-andrews&#46;ac&#46;uk">ic95<span>&#64;</span>st-andrews<span>&#46;</span>ac<span>&#46;</span>uk</a>.</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2009ARA%26A..47..481A/abstract">Asplund et al. 2009ARA&amp;A..47..481A</a> You can download the article if you are on the StA network, otherwise there is a copy on Moodle.</p></li>
+<li><p><a class="reference external" href="https://sta.rl.talis.com/link?url=https%3A%2F%2Fdoi-org.ezproxy.st-andrews.ac.uk%2F10.1007%2F978-3-642-30304-3&amp;amp;sig=fdcd1071b225a1cf90b44eda5279280c95987ab43c127ec62127524cf667c523">R. Kippenhahn, A. Weigert, A. Weiss (2013) “Stellar structure and Evolution</a> E-Textbook (free to StA)</p></li>
+<li><p><a class="reference external" href="http://user.astro.wisc.edu/~townsend/static.php?ref=mesa-web">MESA-Web</a> the online interface you will use to run MESA.</p></li>
+<li><p><a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2023arXiv230915930F/abstract">Fields et al. 2023</a>: Publication to appear in the Astronomy Education Journal describing MESA-Web</p></li>
+<li><p><a class="reference external" href="https://docs.mesastar.org/en/release-r23.05.1/">MESA</a>, the underlying software (FYI).</p></li>
+<li><p><a class="reference external" href="https://matthew-brett.github.io/dsfe/projects/rubric">DSFE 2018 grading rubric</a>, inspiration for rubric.</p></li>
+</ul>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="assignment.html">Assignment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="assignment.html#part-i-stellar-structure-and-evolution-with-mesa">Part I: Stellar structure and evolution with MESA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assignment.html#part-ii-solving-the-stellar-structure-equations-yourself-using-the-shooting-method-schwarzchild">Part II: Solving the stellar structure equations yourself using the shooting method (Schwarzchild)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-as4012_sstr.reader">Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-as4012_sstr.properties">Material Properties</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="right-next"
+       href="assignment.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Assignment</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submission">Submission</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grading-rubric">Grading Rubric</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-questions">Assignment Questions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-installation">Code Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ian Czekala
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Ian Czekala.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
