@@ -39,7 +39,7 @@ jobs:
           ruff check .
       - name: Check types with MyPy
         run: |
-          mypy src/as4012_mesa --pretty
+          mypy src/as4012_sstr --pretty
       - name: Run tests
         run: |
           pytest
