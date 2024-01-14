@@ -32,9 +32,9 @@ As you saw in Part I, the shooting method of solving the equations of stellar st
 
 As you work through this part, reference the equations of stellar structure and their Eulerian/Lagrangian formulations as presented in Lectures 2 & 3.
 
-1. Start from the template code in `template/example.py`. Use the routines in `as4012_mesa.properties` to set up your `odeint` call. Rewrite the numerical integration scheme using the Lagrangian equations with enclosed mass $m$ as an independent variable.
+1. Start from the template code in `template/example.py`. Use the routines in `as4012_sstr.properties` to set up your `odeint` call. Rewrite the numerical integration scheme using the Lagrangian equations with enclosed mass $m$ as an independent variable.
 
-2. (6pts) **Lagrangian Scheme, outward**:  Use $T(0) = T_c$ and $P(0) = P_c$ from your MESA-Web run as boundary conditions. Use [see code]() as an example for outward integration of the Euler equations using ODEint. Set up and run a scheme that integrates the Lagrange equations outward from the centre of the star to $m=0.5M_\star$. Plot the results (which?) as a function of $m$, but anticipate that you will combine this with #5. Additionally, record the values of $r$, $P$, $L$, $T$ at the fitting point for the inward integration.
+2. (6pts) **Lagrangian Scheme, outward**:  Use $T(0) = T_c$ and $P(0) = P_c$ from your MESA-Web run as boundary conditions. Use XX as an example for outward integration of the Euler equations using ODEint. Set up and run a scheme that integrates the Lagrange equations outward from the centre of the star to $m=0.5M_\star$. Plot the results (which?) as a function of $m$, but anticipate that you will combine this with #5. Additionally, record the values of $r$, $P$, $L$, $T$ at the fitting point for the inward integration.
 
 5. (3pts) **Lagrangian Scheme, inward**: Write a second Lagrangian integration scheme that works inward from $M_\star$ to $m=0.5M_\star$. Use the surface values of $R_\star$ and $L_\star$ from your MESA-Web run as boundary conditions. Plot the results (which?) as a function of $m$. Additionally, record the values of $r$, $P$, $L$, $T$ at the fitting point for the inward integration. Combine your plot with #4.
 

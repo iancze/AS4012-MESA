@@ -162,7 +162,10 @@ cython_debug/
 
 .DS_Store
 .vscode
-as4012_mesa_version.py
+as4012_sstr_version.py
 
 # ruff
 .ruff_cache/
+
+# sphinx
+doc/_build

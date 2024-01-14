@@ -57,7 +57,7 @@ pip install .
 ```
 3. Now, in your Python interpreter, you should be able to do
 ```
->>> import as4012_mesa
+>>> import as4012_sstr
 ```
 If you have any issues, please review the [guide to installing Python packages](https://packaging.python.org/en/latest/tutorials/installing-packages/). If your issues persist, please contact <ic95@st-andrews.ac.uk>.
 

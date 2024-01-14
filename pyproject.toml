@@ -17,7 +17,7 @@ dependencies = [
 ]
 description = "Computational Assignment for AS4012"
 dynamic = ["version"]
-name = "as4012_mesa"
+name = "as4012_sstr"
 readme = "README.md"
 requires-python = ">=3.8"
 
@@ -30,6 +30,7 @@ test = [
 
 doc = [
     "sphinx>=7.0.0",
+    "sphinx_book_theme>=0.9.3",
     "myst-nb>=1.0"
 ]
 
@@ -41,7 +42,7 @@ Issues = "https://github.com/iancze/AS4012-MESA/issues"
 source = "vcs"
 
 [tool.hatch.build.hooks.vcs]
-version-file = "src/as4012_mesa/as4012_mesa_version.py"
+version-file = "src/as4012_sstr/as4012_sstr_version.py"
 
 [tool.black]
 line-length = 88
@@ -79,5 +80,5 @@ ignore = [
 exclude = []
 
 [tool.ruff.isort]
-known-first-party = ["as4012_mesa"]
+known-first-party = ["as4012_sstr"]
 combine-as-imports = true
