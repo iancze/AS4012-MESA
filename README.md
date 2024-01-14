@@ -5,3 +5,4 @@ This is the source repository for the AS4012: Nebulae And Stars 2 Stellar Struct
 * Instructor: Dr. Ian Czekala
 
 To get started with the project, view the assignment webpage.
+
