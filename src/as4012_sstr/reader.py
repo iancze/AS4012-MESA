@@ -35,10 +35,15 @@ def read_history(filename):
 
     Returns
     -------
-    :class:`astropy.Table` object containing header and history data
+    :class:`astropy.Table` object containing header and history data.
 
     Notes
     -----
+    See `Astropy.table <https://docs.astropy.org/en/stable/table/>`_ for more information on working with the returned object.
+
+    >>> table = read_history("trimmed_history.data")
+    >>> log_L = table["log_L"]
+
     **Header Data**: The following keys/value pairs in the returned Table.meta dict
     contain header data -- i.e., scalars describing time-independent properties
     of the star. Where applicable, units are given in square brackets [].
@@ -112,7 +117,7 @@ def read_history(filename):
     * fe_core_radius                -- radius of iron core [Rsun]
     * max_abs_v_velocity            -- maximum absolute velocity
     * surf_avg_omega_div_omega_crit -- surface average rotation angular frequency
-    *   [Omega_crit]
+      [Omega_crit]
     * log_total_angular_momentum    -- log10(total angular momentum [cm^2 g/s]
     * surf_avg_omega                -- surface average rotation angular
       frequency [rad/s]
@@ -134,6 +139,10 @@ def read_profile(filename):
     Returns
     -------
     :class:`astropy.Table` containing header and profile data
+
+    >>> table = read_profile("profile123.data")
+    >>> pressure = table["pressure"]
+
 
     Notes
     -----
