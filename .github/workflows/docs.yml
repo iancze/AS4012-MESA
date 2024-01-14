@@ -23,7 +23,8 @@ jobs:
           make -C docs html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
-        path: "docs/_build/html/"
+        with:
+          path: "docs/_build/html/"
   deploy:
     environment:
       name: github-pages
