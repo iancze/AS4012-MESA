@@ -12,7 +12,7 @@ Many questions ask for narrative text to explain your results. Direct and concis
 
 5. Use {meth}`as4012_sstr.reader.read_history` and `trimmed_history.data` to plot the evolutionary track of $L$ vs. $T_\mathrm{eff}$ for all timesteps in the model. Set the axis limits to zoom into when the star is on (and nearly on) the main sequence. Use the `stellar_age` quantity to check your $L$ vs. $T_\mathrm{eff}$ plot comports with your understanding of the main sequence lifetime of the Sun. Is the star truly stationary in the HRD for the entirety of the main sequence? 
 
-6. Use {meth}`as4012_sstr.reader.read_history` and `trimmed_history.data` to plot the mass fractions $X$, $Y$, $Z$, and $X_\mathrm{C}$ at the centre of the star as a function of time, up to $10^{10}$ yrs. How do the initial mass fractions $X$, $Y$, and $Z$ compare to the Asplund+09 values for the protosun?
+6. Use {meth}`as4012_sstr.reader.read_history` and `trimmed_history.data` to plot the mass fractions $X$, $Y$, $Z$, and $X_\mathrm{C}$ at the centre of the star as a function of time, up to $10^{10}$ yrs. How do they change over the main sequence lifetime of the star? How do the initial mass fractions $X$, $Y$, and $Z$ compare to the Asplund+09 values for the protosun?
     
 7.  Inspect the quantities provided by {meth}`as4012_sstr.reader.read_history` and design a set of criteria by which you might determine the Zero-Age Main Sequence (ZAMS) of your model. Plot these criteria (or some combination of them) vs. stellar age to determine the ZAMS age and closest time step (model number).
 
