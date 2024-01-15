@@ -4,13 +4,13 @@
 
 All materials must be submitted through Moodle by **23:59 February 23rd, 2024**. There will be a penalty of 5% of the total available marks per day or partial day of late submission, including weekends and holidays.
 
-Use the Moodle submission tool to submit:
+Use the Moodle to submit:
 
-**Report** containing the narrative text, plots, and numerical results requested for each question. You are free to prepare this report with whatever combination of tools you wish, but it must contain all of your answers and be self-contained *as a single PDF*. I would suggest either
+**Report** containing the narrative text, plots, and numerical results requested for each question via [this Moodle Link](https://moody.st-andrews.ac.uk/moodle/mod/assign/view.php?id=1062940). You are free to prepare this report with whatever combination of tools you wish, but it must contain all of your answers and be self-contained *as a single PDF*. I would suggest either
 * save plots as `*.png`, insert into Word or LaTeX document, add text, save to PDF.
 * work directly in a Jupyter Notebook combining text, numbers and plots then [export to PDF](https://jupyterlab.readthedocs.io/en/stable/user/export.html).
 
-**Code**: your `*.py` or `*.ipynb` files. Alternatively, create a "secret" [Gist](https://gist.github.com/) with your code and submit the link. These will not be graded, nor will I reference them for numerical answers or plots.
+**Code**: your `*.py` or `*.ipynb` files via [this Moodle Link](https://moody.st-andrews.ac.uk/moodle/mod/assign/view.php?id=1125515), or create a "secret" [Gist](https://gist.github.com/) with your code and submit the link. These will not be graded, nor will I reference them for numerical answers or plots.
 
 ## Grading Rubric
 

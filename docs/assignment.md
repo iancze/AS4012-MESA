@@ -1,5 +1,7 @@
 # Assignment Questions
 
+MESA-Web will take at least a couple hours to process each calculation submission, potentially longer under peak demand. Plan ahead.
+
 Many questions ask for narrative text to explain your results. Direct and concise explanations are desirable.
 
 1. Read [Asplund et al. 2009ARA&A..47..481A](https://ui.adsabs.harvard.edu/abs/2009ARA%26A..47..481A/abstract), Sections 1-3, and Table 4. What are the recommended values for *mass fractions* $X$ (H), $Y$ (He), and $Z$ (Table 4) for the protosun and the present day photospheric values. Why do they differ? 
