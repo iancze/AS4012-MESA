@@ -30,7 +30,7 @@ Use the Moodle submission tool to submit:
 * Fail to connect physical and numerical understanding across parts of the assignment.
 * Be incomplete.
 
-The assignment counts for 25% of your module grade. The [**Assignment Questions**](assignment.md) have point values listed beside them, which total 20 pts. The remaining 5 points are awarded for report quality.
+The assignment counts for 25% of your module grade. The [**Assignment Questions**](assignment.md) are worth 2 points each, for a total of 24 pts. The remaining 1 point is awarded for general report quality.
 
 The narrative aspect of your report is as important to understanding the results of your analysis as your numerical values are. Assume that you are writing a technical report to your manager or team members. Take pride in your work and strive for clarity, concision, and excellence.
 

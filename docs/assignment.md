@@ -18,7 +18,7 @@ Many questions ask for narrative text to explain your results. Direct and concis
 
 8. What are the ZAMS radius $R_\star$, luminosity $L_\star$, and effective temperature $T_\mathrm{eff}$? How do these compare to present day values for the Sun?
 
-9. Use the `profiles.index` file to map the model number to the appropriate `profileXX.data` file. Read this profile and plot quantities $\nabla$ ?? vs. mass enclosed coordinate $m$ to answer which zones are convective and which are radiative? Why?
+9. Use the `profiles.index` file to map the model number to the appropriate `profileXX.data` file. To save space, MESA does not save the profile for every model number, so you may need to compromise and use a nearby profile. Read this profile and plot quantities $\nabla_\mathrm{rad}$ and $\nabla_\mathrm{ad}$ vs. mass enclosed coordinate $m$ to identify the radiative and convective zones of the sun. You may wish to plot additional quantities that will help you identify the edge of the core, since this is not technically considered part of the radiative zone.
 
 10. Revisit the `.mp4` movie produced by MESA, and pay particular attention to the plot in the centre of the top row. Pause and advance the movie up through the model number corresponding to ZAMS. Black regions represent radiative zones. Describe how the internal structure of the star changes as it moves from the pre-main sequence to the main sequence.
 
