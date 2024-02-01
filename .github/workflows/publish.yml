@@ -7,6 +7,11 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+        name: pypi
+        url: https://pypi.org/p/as4012_sstr
+    permissions:
+        id-token: write
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
@@ -21,5 +26,3 @@ jobs:
         run: python -m build
       - name: Publish package
         uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          password: ${{ secrets.PYPI_API_TOKEN }}
