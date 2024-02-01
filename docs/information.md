@@ -40,12 +40,11 @@ The narrative aspect of your report is as important to understanding the results
 
 This repository repackages the `mesa_web.py` reader routines to help you analyze the output from your MESA-Web run. To install this code into your Python environment
 
-1. Download this repository from GitHub.
-2. Enter the root of the repository, and run 
+1. Run 
 ```
-pip install .
+pip install as4012_sstr
 ```
-3. Now, in your Python interpreter, you should be able to do
+2. Now, in your Python interpreter, you should be able to do
 ```
 >>> from as4012_sstr import reader
 >>> table = reader.read_history(...)
