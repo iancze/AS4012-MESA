@@ -44,6 +44,10 @@ This repository repackages the `mesa_web.py` reader routines to help you analyze
 ```
 pip install as4012_sstr
 ```
+If you're using the TeachingHub, instead do 
+```
+pip install --user as4012_sstr
+```
 2. Now, in your Python interpreter, you should be able to do
 ```
 >>> from as4012_sstr import reader
