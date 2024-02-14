@@ -6,7 +6,7 @@ Many questions ask for narrative text to explain your results. Direct and concis
 
 1. Read [Asplund et al. 2009ARA&A..47..481A](https://ui.adsabs.harvard.edu/abs/2009ARA%26A..47..481A/abstract), Sections 1-3, and Table 4. What are the recommended values for *mass fractions* $X$ (H), $Y$ (He), and $Z$ (Table 4) for the protosun and the present day photospheric values. Why do they differ? 
 
-2. Using the logarithmic abundances in Asplund+09 Table 1, calculate the present day photospheric value of $X_C$, the mass fraction of carbon. Note that Asplund+09 use $\log$ to mean $\log_{10}$, not $\ln$. 
+2. Using the logarithmic abundances in Asplund+09 Table 1, calculate the present day photospheric value of $X_C$, the mass fraction of carbon. Note that Asplund+09 use $\log$ to mean $\log_{10}$, not $\ln$. You do not need to propagate uncertainties.
 
 3. Read chapter 12 of [Stellar structure and Evolution](https://sta.rl.talis.com/link?url=https%3A%2F%2Fdoi-org.ezproxy.st-andrews.ac.uk%2F10.1007%2F978-3-642-30304-3&sig=fdcd1071b225a1cf90b44eda5279280c95987ab43c127ec62127524cf667c523) by Kippenhahn et al., available through the StA library as an E-Textbook. Then read Section 6 of [Paxton et al. 2011](https://ui.adsabs.harvard.edu/abs/2011ApJS..192....3P/abstract), the paper describing MESA, which is a Henyey-like code. What are the advantages of a Henyey scheme over a Schwarzchild (shooting) scheme? 
 
