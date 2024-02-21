@@ -20,10 +20,10 @@ Many questions ask for narrative text to explain your results. Direct and concis
 
 8. What are the ZAMS radius $R_\star$, luminosity $L_\star$, and effective temperature $T_\mathrm{eff}$? How do these compare to present day values for the Sun?
 
-9. Use the `profiles.index` file to map the model number to the appropriate `profileXX.data` file. To save space, MESA does not save the profile for every model number, so you may need to compromise and use a nearby profile. Read this profile and plot quantities $\nabla_\mathrm{rad}$ and $\nabla_\mathrm{ad}$ vs. mass enclosed coordinate $m$ to identify the radiative and convective zones of the sun. You may wish to plot additional quantities that will help you identify the edge of the core, since this is not technically considered part of the radiative zone.
+9. Use the `profiles.index` file to map the model number to the appropriate `profileXX.data` file. To save space, MESA does not save the profile for every model number, so you may need to compromise and use a nearby profile. Read this profile and plot quantities $\nabla_\mathrm{rad}$ and $\nabla_\mathrm{ad}$ vs. mass enclosed coordinate $m$ to identify the radiative and convective zones of the sun. You may wish to plot additional quantities that will help you identify the "core:" the site of nuclear energy generation.
 
 10. Revisit the `.mp4` movie produced by MESA, and pay particular attention to the plot in the centre of the top row. Pause and advance the movie up through the model number corresponding to ZAMS. Black regions represent radiative zones. Describe how the internal structure of the star changes as it moves from the pre-main sequence to the main sequence.
 
-10. Rerun MESA web for a $2.0 M_\odot$ star and redo your calculation for the ZAMS age. How does this value compare to the ZAMS age for your $1.0 M_\odot$ star?
+11. Rerun MESA web for a $2.0 M_\odot$ star and redo your calculation for the ZAMS age. How does this value compare to the ZAMS age for your $1.0 M_\odot$ star?
 
-11. Identify the convective and radiative regions of the $2.0 M_\odot$ star at the ZAMS and compare them to that of the $1.0 M_\odot$ star. Do all main sequence stars have a structure similar to the Sun: nuclear-burning core interior to a radiative zone interior to a convective layer?
+12. Identify the convective and radiative regions of the $2.0 M_\odot$ star at the ZAMS and compare them to that of the $1.0 M_\odot$ star. To compare the internal structure of stars with different masses, you may wish to plot fraction of mass enclosed rather than simply mass enclosed. Do all main sequence stars have a structure similar to the Sun: nuclear-burning core interior to a radiative zone interior to a convective layer?
