@@ -2,7 +2,7 @@
 
 ## Submission
 
-All materials must be submitted through Moodle by **23:59 February 23rd, 2024**. There will be a penalty of 5% of the total available marks per day or partial day of late submission, including weekends and holidays.
+All materials must be submitted through Moodle by **17:00 February 28th, 2025**. There will be a penalty of 5% of the total available marks per day or partial day of late submission, including weekends and holidays.
 
 Use the Moodle to submit:
 
