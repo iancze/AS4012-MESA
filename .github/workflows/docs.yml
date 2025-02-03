@@ -25,7 +25,7 @@ jobs:
           make -C docs clean
           make -C docs html
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           path: "docs/_build/html/"
   deploy:
